@@ -1,0 +1,54 @@
+.postContent{
+    display: flex;
+    flex-wrap: wrap;
+    border-left: 1px solid black;
+    border-bottom: 1px solid black;
+    border-radius: 8px;
+    padding: 8px;
+
+}
+
+.password-button{
+    background-color: black;
+}
+
+.content, .comment-icons {
+    margin: 4px;
+}
+
+.comment-icons{
+    font-size: 25px;
+    position:relative;
+    left: 50%;
+    top: 10px;
+    background-color: white;
+    border: none;
+}
+
+.comment-icons:hover {
+  background-color: white;
+  box-shadow: 0 0 6px rgba(0, 123, 255, 0.2);
+}
+
+
+@media screen and (max-width: 768px) {
+  .comment-icons {
+    position:relative;
+    left: 10%;
+    font-size: 1.2rem;
+    right: 8px;
+    bottom: 8px;
+  }
+}
+
+/* Phones */
+@media screen and (max-width: 480px) {
+  
+  .comment-icons {
+    position:relative;
+    left: 10%;
+    font-size: 1.1rem;
+    right: 6px;
+    bottom: 6px;
+  }
+}

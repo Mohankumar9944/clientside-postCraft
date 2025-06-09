@@ -1,0 +1,85 @@
+/* CreatePost.css */
+
+.createPostPage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 1rem;
+}
+
+form {
+  background-color: white;
+  padding: 2.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;
+  animation: fadeSlideIn 0.6s ease;
+}
+
+@keyframes fadeSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  } to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #000000; /* deep red */
+  font-size: 1rem;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  margin-bottom: 1.2rem;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+form input:focus,
+form textarea:focus {
+  border-color: #352727;
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.2);
+  outline: none;
+}
+
+form .error {
+  color: #dc2626;
+  font-size: 0.875rem;
+  margin-top: -0.5rem;
+  margin-bottom: 1rem;
+}
+
+button[type="submit"] {
+  background-color: #453939;
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  width: 100%;
+}
+
+button[type="submit"]:hover {
+  background-color: #000000;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 500px) {
+  form {
+    padding: 2rem 1.5rem;
+  }
+}
