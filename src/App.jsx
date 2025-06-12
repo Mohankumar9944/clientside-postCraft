@@ -22,7 +22,7 @@ function App() {
   const [authLoading, setAuthLoading] = useState(true);
 
   useEffect(() => {
-    axios.get('http://localhost:3006/auth/auth', {
+    axios.get('https://serverside-postcraft.onrender.com/auth/auth', {
       headers: {
         accessToken: localStorage.getItem("accessToken"),
       },

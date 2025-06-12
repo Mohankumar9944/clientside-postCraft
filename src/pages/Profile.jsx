@@ -14,11 +14,11 @@ const Profile = () => {
   const {authState}=useContext(AuthContext);
 
   useEffect(() => {
-    axios.get(`http://localhost:3006/auth/basicInfo/${id}`).then((response) => {
+    axios.get(`https://serverside-postcraft.onrender.com/auth/basicInfo/${id}`).then((response) => {
         setUserName(response.data.username);
     });
 
-    axios.get(`http://localhost:3006/posts/byuserId/${id}`).then((response) => {
+    axios.get(`https://serverside-postcraft.onrender.com/posts/byuserId/${id}`).then((response) => {
         setListOfPosts(response.data);
     })
 

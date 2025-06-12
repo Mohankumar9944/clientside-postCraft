@@ -13,7 +13,7 @@ const Login = () => {
 
   const login = () => {
     const data={ username : username, password : password };
-    axios.post("http://localhost:3006/auth/login", data).then((response) =>{
+    axios.post("https://serverside-postcraft.onrender.com/auth/login", data).then((response) =>{
         if (response.data.error) {
             setMessage(response.data.error);
             setUsername('');
@@ -35,7 +35,9 @@ const Login = () => {
 
     })
     .catch(err => {
-      setMessage('An error occurred. Please try again.');
+      console.log("Login error:", err);  // See this in your browser console
+      const errorMsg = err.response?.data?.error || "An error occurred. Please try again.";
+      setMessage(errorMsg);
     });
   }
   return (

@@ -33,7 +33,7 @@ const CreatePost = () => {
 
   const onSubmit = (data) => {
     const postData = { ...data, username: authState.username };
-    axios.post("http://localhost:3006/posts", postData, {
+    axios.post("https://serverside-postcraft.onrender.com/posts", postData, {
       headers: {
         accessToken: localStorage.getItem("accessToken")
       }

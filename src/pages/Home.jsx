@@ -34,7 +34,7 @@ const Home = () => {
       navigate('/login');
     }else{
       hasRedirected.current = false;
-      axios.get("http://localhost:3006/posts", {
+      axios.get("https://serverside-postcraft.onrender.com/posts", {
         headers: { accessToken: localStorage.getItem("accessToken") },
       })
       .then((response) =>{
@@ -45,7 +45,7 @@ const Home = () => {
 
   const likeAPost = (PostId) => {
     axios.post(
-      "http://localhost:3006/like", 
+      "https://serverside-postcraft.onrender.com/like", 
       { PostId: PostId }, 
       { 
         headers: { 

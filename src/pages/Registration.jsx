@@ -17,7 +17,7 @@ const Registration = () => {
     })
 
     const onSubmit = (data, {resetForm}) =>{
-        axios.post("http://localhost:3006/auth", data).then((response) => {
+        axios.post("https://serverside-postcraft.onrender.com/auth", data).then((response) => {
             alert("Registration successful!");
             navigate('/login');
             resetForm();

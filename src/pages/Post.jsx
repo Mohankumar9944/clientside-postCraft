@@ -14,10 +14,10 @@ const Post = () => {
   const navigate=useNavigate();
 
   useEffect(() => {
-    axios.get(`http://localhost:3006/posts/byId/${id}`).then((response) =>{
+    axios.get(`https://serverside-postcraft.onrender.com/posts/byId/${id}`).then((response) =>{
       setPostObject(response.data);
     });
-    axios.get(`http://localhost:3006/comments/${id}`).then((response) =>{
+    axios.get(`https://serverside-postcraft.onrender.com/comments/${id}`).then((response) =>{
       setComments(response.data);
     });
   },[id]);
@@ -28,7 +28,7 @@ const Post = () => {
       return;
     }
     axios
-      .post("http://localhost:3006/comments", {
+      .post("https://serverside-postcraft.onrender.com/comments", {
         commentBody: newComment, 
         PostId: id
       },
@@ -54,7 +54,7 @@ const Post = () => {
   }
 
   const deleteComment = (id) => {
-    axios.delete(`http://localhost:3006/comments/${id}`, {
+    axios.delete(`http://https://serverside-postcraft.onrender.com/comments/${id}`, {
       headers:{
         accessToken: localStorage.getItem("accessToken"),
       },
@@ -65,7 +65,7 @@ const Post = () => {
 
   const deletePost = (id) => {
     if (!window.confirm("Are you sure you want to delete this post?")) return;
-    axios.delete(`http://localhost:3006/posts/${id}`, {
+    axios.delete(`https://serverside-postcraft.onrender.com/posts/${id}`, {
       headers:{
         accessToken: localStorage.getItem("accessToken"),
       },
@@ -80,7 +80,7 @@ const Post = () => {
       let newTitle=prompt("Enter New Title: ");
       if (!newTitle || !newTitle.trim()) return;
       axios.put(
-        "http://localhost:3006/posts/title",
+        "https://serverside-postcraft.onrender.com/posts/title",
         {
           newTitle: newTitle,
           id: id,
@@ -96,7 +96,7 @@ const Post = () => {
       let newPostText=prompt("Enter New Text Of the Post: ");
       if (!newPostText || !newPostText.trim()) return;
       axios.put(
-        "http://localhost:3006/posts/postText",
+        "https://serverside-postcraft.onrender.com/posts/postText",
         {
           newText: newPostText,
           id: id,

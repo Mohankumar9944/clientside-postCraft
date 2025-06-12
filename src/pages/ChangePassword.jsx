@@ -10,7 +10,7 @@ const ChangePassword = () => {
 
 
   const changePassword = () => {
-    axios.put("http://localhost:3006/auth/changepassword", { 
+    axios.put("https://serverside-postcraft.onrender.com/auth/changepassword", { 
         oldPassword: oldPassword, 
         newPassword: newPassword
     }, 
