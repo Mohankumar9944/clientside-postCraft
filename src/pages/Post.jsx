@@ -123,7 +123,7 @@ const Post = () => {
                     editPost("title");
                   }
                 }}
-              >✏️</button>
+              >{authState.username===postObject.username && '✏️'}</button>
               </div>
               <div className="postText">
                 {postObject.postText}
@@ -131,7 +131,7 @@ const Post = () => {
                   if(authState.username===postObject.username){
                     editPost("postText");
                   }
-                }} >✏️</button>
+                }} >{authState.username===postObject.username && '✏️'}</button>
               </div>
               <div className="username">{postObject.username} {authState.username===postObject.username && <button onClick={() => {deletePost(postObject.id)}}>🗑️</button> } </div>
             </div>
